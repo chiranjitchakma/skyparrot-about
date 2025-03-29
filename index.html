@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About SkyParrot</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+        
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: 'Press Start 2P', cursive;
+            background-color: #1B1B1B;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 500px;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 30px;
+            border-radius: 10px;
+            border: 2px solid #FF5252;
+        }
+        
+        h1 {
+            color: #FF5252;
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+        
+        .contact {
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px solid #333;
+        }
+        
+        a {
+            color: #4FC3F7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .back-btn {
+            margin-top: 25px;
+            padding: 12px 25px;
+            background-color: #FF5252;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        
+        .back-btn:hover {
+            background-color: #E53935;
+        }
+        
+        .copyright {
+            margin-top: 30px;
+            font-size: 10px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ABOUT SKYPARROT</h1>
+        
+        <p>Welcome to SkyParrot, the ultimate flying adventure!</p>
+        
+        <p>Dodge obstacles, set high scores, and master the skies with our fearless red parrot.</p>
+        
+        <p>Check out our blog for updates and news. We love hearing your feedback!</p>
+        
+        <div class="contact">
+            <p>For all inquiries:</p>
+            <p><a href="mailto:chiranjitc.official@gmail.com">chiranjitc.official@gmail.com</a></p>
+        </div>
+        
+        <button id="backButton" class="back-btn">BACK TO GAME</button>
+        
+        <div class="copyright">
+            HTML5 Game © Chiranjit C
+        </div>
+    </div>
+
+    <script>
+        // Universal back button that works everywhere
+        document.getElementById('backButton').addEventListener('click', function() {
+            // Try to go back in history first
+            if (window.history.length > 1) {
+                window.history.back();
+            } 
+            // If no history, return to game
+            else {
+                window.location.href = 'index.html';
+            }
+        });
+    </script>
+</body>
+</html>
